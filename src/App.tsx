@@ -601,7 +601,7 @@ export default function App() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 lg:ml-64 pt-16 lg:pt-0 p-4 sm:p-6 lg:p-12 max-w-5xl mx-auto w-full relative">
+      <main className="flex-1 lg:ml-64 pt-16 lg:pt-12 px-4 pb-4 sm:px-6 sm:pb-6 lg:px-12 lg:pb-12 max-w-5xl mx-auto w-full relative">
         {/* Ambient glow for glass effect */}
         <div className="fixed top-1/4 left-1/2 w-[800px] h-[600px] -translate-x-1/4 rounded-full bg-blue-500/[0.04] blur-[120px] pointer-events-none" />
         <div className="fixed bottom-1/4 right-1/4 w-[600px] h-[400px] rounded-full bg-blue-500/[0.03] blur-[100px] pointer-events-none" />
@@ -648,9 +648,9 @@ export default function App() {
               transition={{ duration: 0.3 }}
               className="space-y-24"
             >
-              <header className="text-center max-w-3xl mx-auto">
-                <h2 className="text-3xl font-semibold text-zinc-100 tracking-tight mb-4">建立独家壁垒需要优化"数据"</h2>
-                <p className="text-zinc-400 text-base leading-relaxed">
+              <header className="text-center max-w-2xl mx-auto">
+                <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">建立独家壁垒需要优化"数据"</h2>
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   参考 AlphaSense 的垂直搜索引擎模式，AlphaPai 的战略值得更进一步：从基础的情报引擎到可以真的替分析师/基金经理做分析，需要沉淀"人"的分析方法。
                   <br /><br />
                   所以第一步，在数据和算法层面要把 AI 算账的过程完全透明化，让用户敢信敢用；
