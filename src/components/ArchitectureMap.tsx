@@ -277,7 +277,7 @@ export const ArchitectureMap: React.FC<Props> = ({ onNavigate }) => {
       </svg>
 
       {/* Main 3-column layout */}
-      <div className="relative z-[2] grid grid-cols-[1fr_1.8fr_1fr] items-center px-4" style={{ minHeight: 440 }}>
+      <div className="relative z-[2] grid grid-cols-1 lg:grid-cols-[1fr_1.8fr_1fr] items-center px-4 gap-8 lg:gap-0" style={{ minHeight: 440 }}>
 
         {/* Layer 1: 战略原点 — pushed back */}
         <motion.div

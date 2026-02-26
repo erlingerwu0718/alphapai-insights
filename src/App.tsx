@@ -478,6 +478,7 @@ const QualQuantAnalysis = () => {
 export default function App() {
   const [activeSection, setActiveSection] = useState('overview');
   const [algoTab, setAlgoTab] = useState<'dual-engine' | 'orchestration'>('dual-engine');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navTiers = [
     {
@@ -512,8 +513,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-zinc-300 font-sans selection:bg-blue-500/30 flex">
+      {/* Mobile header */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-30 bg-[#0f0f0f] border-b border-zinc-800/50 flex items-center gap-3 px-4 py-3">
+        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-zinc-400 hover:text-zinc-200 p-1 cursor-pointer">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <div className="w-7 h-7 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(59,130,246,0.4)]">α</div>
+        <span className="text-sm font-semibold text-zinc-100">@AlphaPai</span>
+      </div>
+      {/* Sidebar overlay */}
+      {sidebarOpen && <div className="lg:hidden fixed inset-0 bg-black/60 z-20" onClick={() => setSidebarOpen(false)} />}
       {/* Sidebar */}
-      <aside className="w-64 border-r border-zinc-800/50 bg-[#0f0f0f] flex flex-col fixed h-full z-20">
+      <aside className={`w-64 border-r border-zinc-800/50 bg-[#0f0f0f] flex flex-col fixed h-full z-20 transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
         <div className="p-6 border-b border-zinc-800/50">
           <div className="flex items-center gap-3 mb-1">
             <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_rgba(59,130,246,0.4)]">
@@ -526,7 +537,7 @@ export default function App() {
         
         <nav className="flex-1 p-4 space-y-4 overflow-y-auto">
           <button
-            onClick={() => setActiveSection('overview')}
+            onClick={() => { setActiveSection('overview'); setSidebarOpen(false); }}
             className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
               activeSection === 'overview'
                 ? 'bg-zinc-800/60 text-blue-400 shadow-sm border border-zinc-700/50'
@@ -547,7 +558,7 @@ export default function App() {
                 {tier.items.map(item => (
                   <button
                     key={item.id}
-                    onClick={() => setActiveSection(item.id)}
+                    onClick={() => { setActiveSection(item.id); setSidebarOpen(false); }}
                     className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                       activeSection === item.id 
                         ? 'bg-zinc-800/60 text-blue-400 shadow-sm border border-zinc-700/50' 
@@ -569,7 +580,7 @@ export default function App() {
           ))}
           <div className="mx-3 mt-3 h-px bg-zinc-800/50" />
           <button
-            onClick={() => setActiveSection('summary')}
+            onClick={() => { setActiveSection('summary'); setSidebarOpen(false); }}
             className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
               activeSection === 'summary'
                 ? 'bg-zinc-800/60 text-blue-400 shadow-sm border border-zinc-700/50'
@@ -590,7 +601,7 @@ export default function App() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 ml-64 p-12 max-w-5xl mx-auto w-full relative">
+      <main className="flex-1 lg:ml-64 pt-16 lg:pt-0 p-4 sm:p-6 lg:p-12 max-w-5xl mx-auto w-full relative">
         {/* Ambient glow for glass effect */}
         <div className="fixed top-1/4 left-1/2 w-[800px] h-[600px] -translate-x-1/4 rounded-full bg-blue-500/[0.04] blur-[120px] pointer-events-none" />
         <div className="fixed bottom-1/4 right-1/4 w-[600px] h-[400px] rounded-full bg-blue-500/[0.03] blur-[100px] pointer-events-none" />

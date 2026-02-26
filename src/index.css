@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
 /* DeerFlow-style frosted glass card */
 .glass-card {
   background: linear-gradient(
