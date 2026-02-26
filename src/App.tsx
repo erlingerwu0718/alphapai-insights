@@ -2226,7 +2226,7 @@ export default function App() {
 
               <div className="rounded-xl overflow-hidden border border-zinc-800/50 bg-white/[0.03] max-w-xl mx-auto">
                 <img
-                  src="/research-value.png.jpg"
+                  src={`${import.meta.env.BASE_URL}research-value.png.jpg`}
                   alt="研究的核心价值？高质信息、非共识认知、市场参与主体的关系管理"
                   className="w-full h-auto"
                 />
