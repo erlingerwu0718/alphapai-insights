@@ -648,7 +648,7 @@ export default function App() {
               transition={{ duration: 0.3 }}
               className="space-y-24"
             >
-              <header className="text-center max-w-2xl mx-auto">
+              <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">建立独家壁垒需要优化"数据"</h2>
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   参考 AlphaSense 的垂直搜索引擎模式，AlphaPai 的战略值得更进一步：从基础的情报引擎到可以真的替分析师/基金经理做分析，需要沉淀"人"的分析方法。
@@ -704,7 +704,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">商业模式拓展思考：从现有业务到新增长曲线</h2>
-                <p className="text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   前面五个板块聚焦于讯兔现有二级市场金融工具的深度优化。这个板块跳出来看更远——
                   同一个技术底座，如何向一级市场、企业战略部、跨境市场延伸，打开全新的增长空间。
                 </p>
@@ -968,7 +968,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">关键交互设计思考：让用户100%信任AI的输出</h2>
-                <p className="text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   AlphaSense 在金融垂直场景上的核心竞争力：让用户对 AI 生成的内容<strong className="text-zinc-200 font-medium">完全信任</strong>。
                   在金融投研中，用户的注意力极其宝贵，一旦跳转页面，专注状态就被打断了。
                 </p>
@@ -1228,7 +1228,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">先看全局：全球金融AI竞争格局</h2>
-                <p className="text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   以下是在持续维护的全球金融AI赛道Mapping和每日行业动态，
                   它们是后续对alphapai的战略和产品（逻辑/交互/算法）思考的事实基础。
                 </p>
@@ -1438,7 +1438,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">算法架构思考：从底层引擎到技能编排</h2>
-                <div className="text-zinc-400 text-sm max-w-2xl leading-relaxed space-y-3">
+                <div className="text-zinc-400 text-sm leading-relaxed space-y-3">
                   <p>算法上有两个思考：</p>
                   <p>（1）从产品体验的角度，与 LLM 的核心区别应该是在于对"思考逻辑"与"数据准确性"的 balance：即要求算法架构将"财报数字（定量）"和"高管表态（定性）"建立因果联系，这是支撑能面向金融用户的 Workflow 的产品能力的底层引擎。</p>
                   <p>（2）Anthropic 刚刚开放了 financial-analysis 插件（DCF、LBO、三表建模），意味着基础的 model/research 等能力渐渐成为"水电煤"一样的基础设施。对 AlphaPai 来说，已经不能再去卷"AI 自动算 DCF"或者"AI 写财报点评"，要把基础金融技能（DCF、LBO 等）视为可调用组件、由 Master Controller 编排非标分析逻辑的技能编排层。</p>
@@ -1816,7 +1816,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">深度Workflow沉淀：把分析师的经验变成可复用的流程</h2>
-                <p className="text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   不再拼数据量，而是把顶级分析师的分析经验，变成平台上可复用、可传承的标准流程。这是定义下一代金融AI工具的核心能力。
                 </p>
               </header>
@@ -2087,7 +2087,7 @@ export default function App() {
             >
               <header>
                 <h2 className="text-2xl font-semibold text-zinc-100 tracking-tight mb-3">插件生态思考：要不要自己做插件？</h2>
-                <p className="text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                <p className="text-zinc-400 text-sm leading-relaxed">
                   AlphaSense 是操作系统逻辑，不是做附加功能。
                   <br /><br />
                   但在这个过程中，大量插件公司（如 Rogo、Hebbia、BamSEC）选择只做工作流中的一个环节（切入）。
